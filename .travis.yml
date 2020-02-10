@@ -10,4 +10,4 @@ python: 3.7
 #  - dev
 
 script:
-  - ./run.sh
+  - ./test.sh
