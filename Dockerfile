@@ -9,6 +9,6 @@ EXPOSE 5000
 
 COPY ./server ./server
 COPY ./training ./training
-COPY ./run.sh ./run.sh
+COPY shell_scripts/run.sh ./shell_scripts/run.sh
 
-CMD ["./run.sh"]
+CMD ["./shell_scripts/run.sh"]

@@ -14,7 +14,7 @@ env:
   - deploy_mode=prod
 
 script:
-  - ./test.sh
+  - ./shell_scripts/test.sh
 
 #  Not needed when used with elasticbeanstalk
 #after_success:
