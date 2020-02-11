@@ -8,16 +8,14 @@ import numpy as np
 app = Flask(__name__)
 
 # Read location of model file
-with open("model_location_config.json", "r") as f:
+config_file = "server/model_location_config.json"
+with open(config_file, "r") as f:
     model_location = json.load(f)
 output_folder = model_location["output_folder"]
 model_file = model_location["model_file"]
 
 # Read the pipeline
-target_file = os.path.join(output_folder, model_file)
-if not os.path.isfile(target_file):
-    target_file = os.path.join("static", model_file)
-
+target_file = os.path.join("server/static", model_file)
 pipeline = joblib.load(target_file)
 
 
@@ -34,7 +32,7 @@ def predict(data: str):
     return str(pipeline.transform(converted_data))
 
 
-example_df = pd.read_csv("static/iris.csv")
+example_df = pd.read_csv("server/static/iris.csv")
 example_df = example_df[example_df["Species"].isin(["setosa", "virginica"])]
 
 

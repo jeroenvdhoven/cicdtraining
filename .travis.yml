@@ -10,6 +10,9 @@ python: 3.7
 #  - master
 #  - dev
 
+env:
+  - deploy_mode=prod
+
 script:
   - ./test.sh
 
