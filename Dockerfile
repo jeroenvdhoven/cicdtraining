@@ -8,6 +8,7 @@ ENV FLASK_APP=app.py host=0.0.0.0
 EXPOSE 5000
 
 COPY ./server ./server
+COPY ./training ./training
 COPY ./run.sh ./run.sh
 
 CMD ["./run.sh"]

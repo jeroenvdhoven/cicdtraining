@@ -50,4 +50,4 @@ def predict_test(n: int = 5):
         "actual": subset["Species"]
     })
 
-    return str(result)
+    return result.to_html()
