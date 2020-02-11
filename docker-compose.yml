@@ -7,4 +7,5 @@ services:
       context: .
       dockerfile: Dockerfile
     image: 859523592427.dkr.ecr.us-east-1.amazonaws.com/cicdtraining:latest
-
+    volumes:
+    - ".:/modelserver/code_volume/:ro"

@@ -22,7 +22,7 @@ pipeline = joblib.load(target_file)
 @app.route('/')
 def hello():
     name = request.args.get("name", "World")
-    return f'Hello, {escape(name)}! This is deployed on travis'
+    return f'Hello, {escape(name)}! This is deployed on travissdf'
 
 
 # Make an endpoint that accepts one variable `data` as input
