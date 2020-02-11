@@ -1,8 +1,9 @@
 language: python
 python: 3.7
 
-services:
-  - docker
+#  Not needed when used with elasticbeanstalk
+#services:
+#  - docker
 
 #branches:
 #  only:
@@ -12,11 +13,12 @@ services:
 script:
   - ./test.sh
 
-after_success:
-  - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD $DOCKER_URL
-  - docker-compose build
-  # Push to repo
-  - docker-compose push
+#  Not needed when used with elasticbeanstalk
+#after_success:
+#  - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD $DOCKER_URL
+#  - docker-compose build
+#  # Push to repo
+#  - docker-compose push
 
 deploy:
   provider: elasticbeanstalk
