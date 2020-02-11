@@ -7,6 +7,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 ENV FLASK_APP=app.py host=0.0.0.0
 EXPOSE 5000
 
-COPY ./ ./
+COPY ./server ./server
+COPY ./run.sh ./run.sh
 
 CMD ["./run.sh"]
