@@ -25,6 +25,6 @@ deploy:
   secret_access_key:
     secure: $AWS_SECRET_ACCESS_KEY
   region: "eu-west-1"
-  app: "cicdtraining-dev"
-  env: "cicdtraining"
+  app: "cicdtraining"
+  env: "cicdtraining-dev"
   bucket_name: "mob-cicd-training"
