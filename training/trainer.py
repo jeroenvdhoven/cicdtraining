@@ -8,7 +8,7 @@ from sklearn.metrics import confusion_matrix
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler, OrdinalEncoder, FunctionTransformer
 
-from .model_functions import call_model, reverse_labels
+from server.model_functions import call_model, reverse_labels
 
 if __name__ == "__main__":
     with open("server/model_location_config.json", "r") as f:

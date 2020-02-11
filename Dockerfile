@@ -8,7 +8,6 @@ ENV host=0.0.0.0
 EXPOSE 5000
 
 COPY ./server ./server
-COPY ./training ./training
 COPY shell_scripts/run.sh ./shell_scripts/run.sh
 
 CMD ["./shell_scripts/run.sh"]
